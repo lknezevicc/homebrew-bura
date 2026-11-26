@@ -13,15 +13,15 @@ cask "bura" do
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Bura.app"
 
   # Homebrew always quarantines casks. Bura is signed with a self-signed identity (no Apple notarization),
   # so Gatekeeper would block the first launch. Remove the flag for this cask only.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Bura.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Bura.app"]
   end
 
   zap trash: [
