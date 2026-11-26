@@ -1,6 +1,6 @@
 cask "bura" do
-  version "0.0.1"
-  sha256 "53cf974ab2b10a7e399e6fc805cabb3b7ad39c5ada71afc24cbc8c40af756653"
+  version "0.0.2"
+  sha256 "8b4a60db4bac14a37bdbb5b24b5565a6a02c29342ddc8f44ca5de0e5385568f9"
 
   url "https://github.com/lknezevicc/homebrew-bura/releases/download/v#{version}/Bura-#{version}.dmg"
   name "Bura"
